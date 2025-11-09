@@ -53,6 +53,7 @@ body {
   font-family: "isonorm", sans-serif;
   font-size: var(--text-base);
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 /* Classes utilitaires */
@@ -88,6 +89,10 @@ body {
 
 .text-md {
   font-size: var(--text-md);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
 }
 
 .text-xl {
@@ -127,6 +132,24 @@ body {
   background-color: var(--secondary);
 }
 
+.capitulo-portada {
+  height: 1000px;
+  width: 100%;
+  background: var(--bg-img) no-repeat center center / cover;
+  background-attachment: fixed;
+  margin-bottom: 5rem;
+  color: var(--white);
+
+  @media (max-width: 768px) {
+    height: 600px;
+  }
+}
+
+.capitulo-portada h2 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+
 /* Golbal styles */
 h1,
 .h1 {
@@ -137,7 +160,11 @@ h1,
 h2,
 .h2 {
   font-size: var(--text-h2);
-  line-height: var(--text-h2);
+  line-height: var(--text-h1);
+
+  @media (max-width: 768px) {
+    font-size: var(--text-h3);
+  }
 }
 
 h3,
@@ -166,6 +193,7 @@ img {
 header {
   margin-bottom: 10rem;
 }
+
 header .header-hero {
   height: 90dvh;
   position: relative;
@@ -274,7 +302,37 @@ header .header-prologue {
   justify-content: space-between;
 }
 
+/* Introduccion */
+
+#intro {
+  margin-bottom: 10rem;
+}
+
 #intro img {
   width: 100%;
   margin-bottom: 10rem;
+}
+
+/* Capitulo 1 */
+#capitulo_1 .capitulo-portada {
+  --bg-img: url("assets/img/cap1_mictlan.jpg");
+}
+
+#capitulo_1 .capitulo-portada h2 {
+  margin-left: auto;
+  width: 50%;
+  text-wrap: balance;
+
+  @media (max-width: 1024px) {
+    width: auto;
+    margin-left: unset;
+  }
+}
+
+#capitulo_1 .intro {
+  margin-bottom: 5rem;
+}
+
+#capitulo_1 .intro p {
+  margin-bottom: 5rem;
 }
