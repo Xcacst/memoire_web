@@ -19,14 +19,15 @@
   --white: #ffffff;
   --black: #000000;
   --primary: #d6f4e7;
-  --secondary: salmon;
+  --secondary: #ffa680;
   --text-base: 20px;
   --text-md: 25px;
   --text-lg: 30px;
   --text-xl: 35px;
   --text-xxl: 45px;
   --text-h1: 200px;
-  --text-h2: 50px;
+  --text-h2: 100px;
+  --text-h3: 50px;
   --container-sm: 680px;
   --container-md: 910px;
   --container-lg: 1140px;
@@ -96,16 +97,17 @@ body {
 .highlight-anim {
   position: relative;
   z-index: 10;
+  width: fit-content;
 }
 
 .highlight-anim::after {
   content: "";
   display: block;
   height: 100%;
-  width: calc(100% + 15px);
+  width: calc(100% + 20px);
   position: absolute;
   top: 0;
-  left: -5px;
+  left: -10px;
   z-index: -10;
   transform-origin: 100% 50%;
   transform: scale3d(0, 1, 1);
@@ -126,8 +128,28 @@ body {
 }
 
 /* Golbal styles */
-h1 {
+h1,
+.h1 {
   font-size: var(--text-h1);
+  line-height: var(--text-h1);
+}
+
+h2,
+.h2 {
+  font-size: var(--text-h2);
+  line-height: var(--text-h2);
+}
+
+h3,
+.h3 {
+  font-size: var(--text-h3);
+  line-height: var(--text-h3);
+  background-color: var(--primary);
+  width: fit-content;
+  padding-inline: 20px;
+  text-align: right;
+  margin-left: auto;
+  margin-bottom: 5rem;
 }
 
 a {
@@ -135,7 +157,15 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*  Header */
+header {
+  margin-bottom: 10rem;
+}
 header .header-hero {
   height: 90dvh;
   position: relative;
@@ -205,8 +235,11 @@ header .header-summary {
   border: 1px solid var(--black);
   padding: 8px;
 }
+header .header-summary div {
+  padding-left: 0.5rem;
+}
 
-header .header-summary p:last-of-type {
+header .header-summary div:last-of-type {
   margin-bottom: 2rem;
 }
 
@@ -239,4 +272,9 @@ header .header-prologue {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+#intro img {
+  width: 100%;
+  margin-bottom: 10rem;
 }
