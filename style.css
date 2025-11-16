@@ -676,3 +676,8 @@ header .header-prologue {
 #cap_2_4 .container-md:last-of-type p {
   margin-bottom: 3rem;
 }
+
+/* Capitulo 3 */
+#capitulo_3 .capitulo-portada {
+  --bg-img: url("assets/img/cap3.jpg");
+}
