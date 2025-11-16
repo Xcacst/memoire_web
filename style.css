@@ -151,6 +151,32 @@ body {
   padding: 2rem;
 }
 
+.poema {
+  background-color: rgba(0, 0, 0, 75%);
+  color: var(--white);
+  font-family: "commissioner";
+  font-weight: 200;
+  max-width: 470px;
+  padding: 2rem 0;
+  margin: auto;
+  transform: translateY(-210px);
+  padding-inline: 1rem;
+
+  @media screen and (max-width: 1536px) {
+    transform: translateY(-160px);
+  }
+}
+
+.poema span {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-inline: 3rem;
+}
+
+.poema span:first-child {
+  margin-bottom: 1.5rem;
+}
+
 /* Golbal styles */
 h1,
 .h1 {
@@ -401,9 +427,6 @@ header .header-prologue {
   grid-column: span 2;
 }
 
-#cap_1_2 .cap_1_2_lista-niveles .nivel:nth-child(odd) {
-}
-
 #cap_1_2 .cap_1_2_lista-niveles .nivel:nth-child(even) {
   @media (min-width: 768px) {
     grid-column: 2;
@@ -483,4 +506,173 @@ header .header-prologue {
 
 #cap_1_3 .container-xl ul li:last-child::before {
   background-color: rgba(255, 0, 0, 30%);
+}
+
+/* Capitulo 2 */
+#capitulo_2 .capitulo-portada {
+  --bg-img: url("assets/img/la-sombra-del-popo.jpg");
+}
+
+#capitulo_2 .poema {
+  font-weight: 600;
+}
+
+#cap_2_1 > img {
+  margin-bottom: 10rem;
+}
+
+#cap_2_1 .container-md p {
+  margin-bottom: 1rem;
+}
+
+#cap_2_1 .container-md p:last-of-type {
+  margin-bottom: 5rem;
+}
+
+#cap_2_2 .container-md p {
+  margin-bottom: 1rem;
+}
+#cap_2_2 .container-md p:last-of-type {
+  margin-bottom: 10rem;
+}
+
+#cap_2_2 > img {
+  margin-bottom: 10rem;
+}
+
+#cap_2_2 .container-sm {
+  margin-bottom: 10rem;
+}
+
+#cap_2_2 .container-sm p {
+  margin-bottom: 1rem;
+}
+#cap_2_2 .container-sm p:last-of-type {
+  margin-bottom: 5rem;
+}
+
+#cap_2_3 > img {
+  margin-bottom: 1rem;
+
+  @media (min-width: 1280px) {
+    margin-bottom: 5rem;
+  }
+}
+
+#cap_2_3 > img:last-child {
+  margin-bottom: 10rem;
+}
+
+#cap_2_3 .container-md p {
+  margin-bottom: 1rem;
+}
+
+#cap_2_3 .container-md p:last-of-type {
+  margin-bottom: 5rem;
+}
+
+#cap_2_3 .container-xl {
+  margin: 0 0 10rem;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10%;
+  max-width: unset;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 20%;
+  }
+}
+
+#cap_2_3 .container-xl > div {
+  @media (min-width: 768px) {
+    width: 60%;
+  }
+}
+
+#cap_2_3 .container-xl ul {
+  display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    width: 200px;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 1rem;
+  }
+
+  @media (min-width: 1280px) {
+    gap: 2rem;
+  }
+}
+
+#cap_2_3 .container-xl ul li:not(:last-child)::after {
+  @media (max-width: 768px) {
+    content: "•";
+    margin-left: 1rem;
+  }
+}
+
+#cap_2_4 {
+  margin-bottom: 10rem;
+}
+
+#cap_2_4 .container-md {
+  margin-bottom: 5rem;
+}
+
+#cap_2_4 .container-sm {
+  margin-bottom: 10rem;
+}
+
+#cap_2_4 .container-sm p {
+  margin-bottom: 1rem;
+}
+
+#cap_2_4 > img {
+  margin-bottom: 1rem;
+
+  @media (min-width: 1280px) {
+    margin-bottom: 5rem;
+  }
+}
+
+#cap_2_4 .container-xxl {
+  margin-top: 5rem;
+}
+
+#cap_2_4 .container-xxl .container-xl {
+  margin: 0 0 0 auto;
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 5rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+}
+
+#cap_2_4 .container-xxl .container-xl > * {
+  flex: 1;
+}
+
+#cap_2_4 .container-xxl .container-xl > div:has(img) {
+  flex: 2;
+}
+
+#cap_2_4 .container-md:last-of-type p {
+  margin-bottom: 3rem;
 }
