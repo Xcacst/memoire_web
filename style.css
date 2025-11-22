@@ -1,6 +1,13 @@
 @import url("reset.css");
 
 @font-face {
+  font-family: "Outfit";
+  src: url("assets/typos/Outfit-VariableFont_wght.ttf");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "isonorm";
   src: url("assets/typos/Isonorm\ 3098\ Regular.otf");
   font-style: normal;
@@ -21,14 +28,16 @@
   --gray: #d9d9d9;
   --primary: #d6f4e7;
   --secondary: #ffa680;
+  --text-sm: 14px;
   --text-base: 20px;
   --text-md: 25px;
   --text-lg: 30px;
   --text-xl: 35px;
   --text-xxl: 45px;
-  --text-h1: 200px;
+  --text-h1: 160px;
   --text-h2: 100px;
   --text-h3: 50px;
+  --text-h4: 20px;
   --container-sm: 680px;
   --container-md: 910px;
   --container-lg: 1140px;
@@ -51,10 +60,11 @@
 
 html,
 body {
-  font-family: "isonorm", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: var(--text-base);
   line-height: 1.5;
   scroll-behavior: smooth;
+  font-weight: 200;
 }
 
 /* Classes utilitaires */
@@ -101,6 +111,7 @@ body {
 }
 
 .highlight-anim {
+  display: inline-block;
   position: relative;
   z-index: 10;
   width: fit-content;
@@ -177,15 +188,34 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.list-style-puntos {
+  list-style: disc;
+}
+
+.list-style-puntos > li:not(last-child) {
+  margin-bottom: 1rem;
+}
+
+.notas {
+  margin-block: 3rem;
+}
+
+.nota {
+  font-size: var(--text-sm);
+  font-weight: 400;
+}
+
 /* Golbal styles */
 h1,
 .h1 {
+  font-family: "isonorm";
   font-size: var(--text-h1);
   line-height: var(--text-h1);
 }
 
 h2,
 .h2 {
+  font-family: "isonorm";
   font-size: var(--text-h2);
   line-height: var(--text-h1);
 
@@ -196,6 +226,7 @@ h2,
 
 h3,
 .h3 {
+  font-family: "isonorm";
   font-size: var(--text-h3);
   line-height: var(--text-h3);
   background-color: var(--primary);
@@ -208,6 +239,7 @@ h3,
 
 h4,
 .h4 {
+  font-family: "isonorm";
   font-size: var(--text-xl);
   background-color: var(--gray);
   padding-inline: 10px;
@@ -242,8 +274,10 @@ header .header-hero img {
   object-position: bottom center;
 }
 
-header .header-hero h1 {
-  display: block;
+header .header-hero .header-hero__title {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   color: var(--white);
   width: 700px;
   max-width: 100%;
@@ -252,6 +286,10 @@ header .header-hero h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+header .header-hero .header-hero__title p {
+  font-weight: 400;
 }
 
 header .neza {
@@ -680,4 +718,78 @@ header .header-prologue {
 /* Capitulo 3 */
 #capitulo_3 .capitulo-portada {
   --bg-img: url("assets/img/cap3.jpg");
+}
+
+#capitulo_3 .container-md {
+  margin-bottom: 10rem;
+}
+
+#capitulo_3 .container-xl.cap3-main {
+  max-width: var(--container-xl);
+  margin: 0 auto 10rem;
+  padding-inline: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+/* Columna imagen */
+#capitulo_3 .container-xl.cap3-main > div {
+  flex: 0 0 55%;
+}
+
+/* Imagen */
+#capitulo_3 .container-xl.cap3-main img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Texto */
+#capitulo_3 .container-xl.cap3-main p {
+  flex: 0 0 35%;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------
+   2) BLOQUES REPETIBLES (duo)
+   --------------------------------------------------- */
+#capitulo_3 .container-xl.duo {
+  max-width: var(--container-xl);
+  margin: 0 auto 8rem;
+  padding-inline: 1rem;
+
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Imagen del bloque duo */
+#capitulo_3 .container-xl.duo img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Texto del bloque duo */
+#capitulo_3 .container-xl.duo p {
+  width: 50%;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive para duo */
+@media (max-width: 1024px) {
+  #capitulo_3 .container-xl.duo {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  #capitulo_3 .container-xl.duo img,
+  #capitulo_3 .container-xl.duo p {
+    width: 100%;
+  }
 }
